@@ -1,0 +1,48 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+:root {
+  --color-base: #ffffff;
+  --color-text: #000000;
+  --color-base2: #eeeeee;
+  --color-text2: #111111;
+  --theme: "light";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #000000;
+    --color-text: #ffffff;
+    --color-base2: #111111;
+    --color-text2: #eeeeee;
+    --theme: "dark";
+  }
+}
+
+body {
+  background: var(--color-base);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: var(--color-base);
+  color: var(--color-text);
+  margin-top: 50px;
+}
+.container .card {
+  height: auto;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: var(--color-base2);
+  padding: 20px;
+}
+.container .card h1:after {
+  content: var(--theme);
+}
+.container .card p {
+  color: var(--color-text2);
+}
